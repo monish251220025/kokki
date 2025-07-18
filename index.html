@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kokki - Manufacturing Supplier Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="logo">
+                    <h1>Kokki</h1>
+                    <span class="tagline">Manufacturing Supplier Network</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h2>What do you want to manufacture?</h2>
+                    <p>Find the perfect supplier for your manufacturing needs through our guided selection process</p>
+                </div>
+            </section>
+
+            <!-- Selection Form -->
+            <section class="selection-section">
+                <div class="selection-container">
+                    <!-- Process Dropdown -->
+                    <div class="dropdown-group">
+                        <label for="processSelect" class="form-label">Process</label>
+                        <select id="processSelect" class="form-control dropdown-select">
+                            <option value="">Select a process...</option>
+                            <option value="Moulding">Moulding</option>
+                            <option value="Sheet Metal Pressing">Sheet Metal Pressing</option>
+                            <option value="Machining">Machining</option>
+                            <option value="Assembly">Assembly</option>
+                            <option value="Post Processing">Post Processing</option>
+                        </select>
+                    </div>
+
+                    <!-- Materials Dropdown -->
+                    <div class="dropdown-group" id="materialsGroup" style="display: none;">
+                        <label for="materialsSelect" class="form-label">Materials</label>
+                        <select id="materialsSelect" class="form-control dropdown-select">
+                            <option value="">Select materials...</option>
+                        </select>
+                    </div>
+
+                    <!-- Grade Dropdown -->
+                    <div class="dropdown-group" id="gradeGroup" style="display: none;">
+                        <label for="gradeSelect" class="form-label">Grade</label>
+                        <select id="gradeSelect" class="form-control dropdown-select">
+                            <option value="">Select grade...</option>
+                        </select>
+                    </div>
+
+                    <!-- Sub Process Dropdown -->
+                    <div class="dropdown-group" id="subProcessGroup" style="display: none;">
+                        <label for="subProcessSelect" class="form-label">Sub Process</label>
+                        <select id="subProcessSelect" class="form-control dropdown-select">
+                            <option value="">Select sub process...</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Button -->
+                    <div class="reset-section">
+                        <button id="resetBtn" class="btn btn--secondary">Reset Selections</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-content">
+                    <div class="loading-spinner"></div>
+                    <p>Finding suppliers...</p>
+                </div>
+            </section>
+
+            <!-- Suppliers Results -->
+            <section class="suppliers-section" id="suppliersSection" style="display: none;">
+                <div class="suppliers-header">
+                    <h3>Available Suppliers</h3>
+                    <div class="suppliers-count">
+                        <span id="suppliersCount">0 suppliers found</span>
+                    </div>
+                </div>
+                
+                <div class="suppliers-grid" id="suppliersGrid">
+                    <!-- Suppliers will be populated here -->
+                </div>
+            </section>
+
+            <!-- Empty State -->
+            <section class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-content">
+                    <h3>No suppliers found</h3>
+                    <p>No suppliers match your current selection criteria. Try adjusting your selections or contact us to add suppliers for your specific needs.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Supplier Modal -->
+    <div class="modal" id="supplierModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Supplier Details</h3>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body" id="supplierModalBody">
+                <!-- Supplier details will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+{
+  "Moulding": {
+    "Aluminum": {
+      "ADC12": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting",
+        "Vacuum Casting"
+      ],
+      "6061": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting",
+        "Vacuum Casting"
+      ],
+      "2024": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting",
+        "Vacuum Casting"
+      ],
+      "7075": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting",
+        "Vacuum Casting"
+      ]
+    },
+    "Zinc": {
+      "Zamak 3": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting"
+      ],
+      "Zamak 5": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting"
+      ],
+      "ZA-8": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting"
+      ],
+      "ZA-12": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting"
+      ],
+      "ZA-27": [
+        "HPDC",
+        "LPDC",
+        "Investment Casting"
+      ]
+    },
+    "Plastic": {
+      "ABS": [
+        "Injection Molding",
+        "Vacuum Casting",
+        "Blow Molding"
+      ],
+      "Polycarbonate": [
+        "Injection Molding",
+        "Vacuum Casting",
+        "Blow Molding"
+      ],
+      "Polypropylene": [
+        "Injection Molding",
+        "Vacuum Casting",
+        "Blow Molding"
+      ],
+      "Nylon": [
+        "Injection Molding",
+        "Vacuum Casting",
+        "Blow Molding"
+      ]
+    },
+    "Rubber": {
+      "Natural Rubber": [
+        "Compression Molding",
+        "Injection Molding",
+        "Vacuum Casting"
+      ],
+      "Silicone": [
+        "Compression Molding",
+        "Injection Molding",
+        "Vacuum Casting"
+      ],
+      "EPDM": [
+        "Compression Molding",
+        "Injection Molding",
+        "Vacuum Casting"
+      ]
+    }
+  },
+  "Sheet Metal Pressing": {
+    "Steel": {
+      "Mild Steel": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ],
+      "Stainless Steel": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ],
+      "High Carbon Steel": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ]
+    },
+    "Aluminum": {
+      "6061": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ],
+      "2024": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ],
+      "7075": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ]
+    },
+    "Copper": {
+      "Pure Copper": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ],
+      "Brass": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ],
+      "Bronze": [
+        "Blanking",
+        "Piercing",
+        "Bending",
+        "Drawing",
+        "Embossing"
+      ]
+    }
+  },
+  "Machining": {
+    "Aluminum": {
+      "6061": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling",
+        "Grinding"
+      ],
+      "2024": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling",
+        "Grinding"
+      ],
+      "7075": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling",
+        "Grinding"
+      ]
+    },
+    "Steel": {
+      "Mild Steel": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling",
+        "Grinding"
+      ],
+      "Stainless Steel": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling",
+        "Grinding"
+      ],
+      "Tool Steel": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling",
+        "Grinding"
+      ]
+    },
+    "Plastic": {
+      "ABS": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling"
+      ],
+      "Polycarbonate": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling"
+      ],
+      "Nylon": [
+        "CNC Milling",
+        "CNC Turning",
+        "Drilling"
+      ]
+    }
+  },
+  "Assembly": {
+    "Mechanical": {
+      "Welding": [
+        "Arc Welding",
+        "TIG Welding",
+        "MIG Welding",
+        "Spot Welding"
+      ],
+      "Fastening": [
+        "Bolting",
+        "Riveting",
+        "Screwing",
+        "Clipping"
+      ],
+      "Adhesive": [
+        "Structural Bonding",
+        "Sealing",
+        "Potting",
+        "Gasket Assembly"
+      ]
+    },
+    "Electronic": {
+      "PCB Assembly": [
+        "SMT Assembly",
+        "Through-hole Assembly",
+        "Mixed Assembly"
+      ],
+      "Wire Harness": [
+        "Crimping",
+        "Soldering",
+        "Heat Shrinking",
+        "Bundling"
+      ],
+      "Testing": [
+        "Functional Testing",
+        "Burn-in Testing",
+        "Environmental Testing"
+      ]
+    }
+  },
+  "Post Processing": {
+    "Surface Treatment": {
+      "Coating": [
+        "Powder Coating",
+        "Electroplating",
+        "Anodizing",
+        "Painting"
+      ],
+      "Finishing": [
+        "Polishing",
+        "Sandblasting",
+        "Tumbling",
+        "Vibratory Finishing"
+      ],
+      "Heat Treatment": [
+        "Annealing",
+        "Tempering",
+        "Hardening",
+        "Stress Relief"
+      ]
+    },
+    "Quality Control": {
+      "Inspection": [
+        "Dimensional Inspection",
+        "Surface Inspection",
+        "Material Testing"
+      ],
+      "Testing": [
+        "Functional Testing",
+        "Durability Testing",
+        "Environmental Testing"
+      ]
+    }
+  }
+}
