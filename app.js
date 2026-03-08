@@ -348,6 +348,9 @@ function initializeApp() {
 
   // Setup event listeners
   setupEventListeners();
+
+  // Initialize scroll animation
+  initScrollAnimation();
   
   console.log('Kokki app initialized successfully');
 }
@@ -695,3 +698,66 @@ function resetSelections() {
 
 // Global function for onclick handlers
 window.openSupplierModal = openSupplierModal;
+
+// Scroll Animation
+function initScrollAnimation() {
+  const section = document.getElementById('scrollAnimSection');
+  if (!section) return;
+
+  const frames = section.querySelectorAll('.scroll-frame');
+  const progressBar = document.getElementById('scrollProgressBar');
+  const hint = section.querySelector('.scroll-animation-hint');
+  const totalFrames = frames.length;
+  let currentFrame = 0;
+  let scrollableHeight = section.offsetHeight - window.innerHeight;
+  let isSectionVisible = false;
+
+  // Recalculate on resize since section height is static but viewport may change
+  window.addEventListener('resize', function() {
+    scrollableHeight = section.offsetHeight - window.innerHeight;
+  }, { passive: true });
+
+  function updateScrollAnimation() {
+    if (!isSectionVisible) return;
+
+    const sectionTop = section.getBoundingClientRect().top;
+
+    // How far we've scrolled into the section (0 = start, scrollableHeight = end)
+    const scrolled = Math.max(0, Math.min(-sectionTop, scrollableHeight));
+    const progress = scrollableHeight > 0 ? scrolled / scrollableHeight : 0;
+
+    // Update progress bar
+    if (progressBar) {
+      progressBar.style.width = (progress * 100) + '%';
+    }
+
+    // Hide scroll hint once user starts scrolling into the section
+    if (hint) {
+      hint.style.opacity = scrolled > 20 ? '0' : '';
+    }
+
+    // Determine which frame to show (0-indexed)
+    const frameIndex = Math.min(
+      Math.floor(progress * totalFrames),
+      totalFrames - 1
+    );
+
+    if (frameIndex !== currentFrame) {
+      frames[currentFrame].classList.remove('active');
+      frames[frameIndex].classList.add('active');
+      currentFrame = frameIndex;
+    }
+  }
+
+  // Only run scroll handler when section is in/near the viewport
+  const observer = new IntersectionObserver(function(entries) {
+    isSectionVisible = entries[0].isIntersecting;
+    if (isSectionVisible) {
+      updateScrollAnimation();
+    }
+  }, { threshold: 0 });
+  observer.observe(section);
+
+  window.addEventListener('scroll', updateScrollAnimation, { passive: true });
+  updateScrollAnimation();
+}
