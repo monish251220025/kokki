@@ -744,7 +744,128 @@ select.form-control {
   padding: var(--space-32) 0;
 }
 
-/* Hero Section */
+/* Scroll Animation Section */
+.scroll-animation-section {
+  position: relative;
+  height: 400vh;
+  background: #000;
+}
+
+.scroll-animation-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-animation-frames {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-frame {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.scroll-frame.active {
+  opacity: 1;
+}
+
+.scroll-animation-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-24) var(--space-32);
+  max-width: 700px;
+  pointer-events: none;
+}
+
+.scroll-animation-content h2 {
+  font-size: clamp(var(--font-size-3xl), 4vw, 48px);
+  font-weight: var(--font-weight-bold);
+  color: #ffffff;
+  margin-bottom: var(--space-16);
+  line-height: var(--line-height-tight);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-animation-content p {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: var(--line-height-normal);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-animation-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--font-size-sm);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.scroll-animation-hint-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  animation: scrollHintFade 2s ease-in-out infinite;
+}
+
+.scroll-arrow {
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  margin-top: -8px;
+}
+
+@keyframes scrollHintFade {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(6px); }
+}
+
+.scroll-animation-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 3;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--color-teal-300);
+  transition: width 0.1s linear;
+}
+
+/* Hero Section (kept for reference, hidden when scroll section is present) */
 .hero-section {
   text-align: center;
   margin-bottom: var(--space-32);
@@ -1216,6 +1337,18 @@ select.form-control {
     padding: var(--space-16) 0;
   }
   
+  .scroll-animation-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .scroll-animation-content p {
+    font-size: var(--font-size-base);
+  }
+
+  .scroll-animation-content {
+    padding: var(--space-16);
+  }
+
   .hero-content h2 {
     font-size: var(--font-size-3xl);
   }
